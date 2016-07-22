@@ -1,0 +1,24 @@
+body {background-image: url(bg.jpg);
+	background-repeat: no-repeat;
+	font-family: 'Teko', sans-serif;
+	letter-spacing: 2px;}
+h1 {text-align: center;
+	font-size: 100px;
+	font-weight: 400;
+	margin-top: 310px;
+	margin-bottom: -70px;
+	color: rgb(50,50,50);}
+h2 {text-align: center;
+	font-size: 40px;
+	font-weight: 300;
+	color: rgb(50,50,50);}
+ul {margin-top: 100px;
+	margin-right: 40px;
+	text-align: center;}
+li {display: inline;
+	margin-left: 50px;
+	margin-right: 50px;}
+.logo {display: block;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 100px;}
