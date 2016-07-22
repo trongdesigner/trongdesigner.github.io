@@ -1,19 +1,992 @@
+
+
+
 <!DOCTYPE html>
-<html>
-	<head>
-		<link rel="stylesheet" type="text/css" href="./home/home.css"
-		href='https://fonts.googleapis.com/css?family=Teko:400,500,300,700,600' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Teko:400,500,300,700,600' rel='stylesheet' type='text/css'>
-	</head>
-	<body>
-		<h1>TrongNG</h1>
-		<h2>graphic designer / photographer / videographer</h2>
-		<ul>
-			<li><img src="./designs.png"></li>
-			<li><img src="./photos.png"></li>
-			<li><img src="./videos.png"></li>
-			<li><img src="./info.png"></li>
-		</ul>
-		<img class="logo" src="./logo.png">
-	</body>
+<html lang="en-US" dir="ltr" class="redesign no-js"  data-ffo-opensanslight=true data-ffo-opensans=true >
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <script>(function(d) { d.className = d.className.replace(/\bno-js/, ''); })(document.documentElement);</script>
+  
+    
+  
+
+  
+  <title>Getting started with the Web - Learning web development | MDN</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+  <link rel="home" href="/en-US/">
+  <link rel="copyright" href="#copyright">
+
+  
+    
+    
+    <link href="https://developer.cdn.mozilla.net/static/build/styles/mdn.338ff9dba3e9.css" rel="stylesheet" type="text/css" />
+
+    
+  
+    <link href="https://developer.cdn.mozilla.net/static/build/styles/wiki.328342d23d10.css" rel="stylesheet" type="text/css" />
+
+    
+      
+        <link rel="stylesheet" type="text/css" href="/en-US/docs/Learn$styles">
+      
+    
+
+
+  <!-- common social tags -->
+  
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+  <meta property="og:site_name" content="Mozilla Developer Network">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:image" content="https://developer.cdn.mozilla.net/static/img/opengraph-logo.dc4e08e2f6af.png">
+  <meta name="twitter:site" content="@MozDevNet">
+  <meta name="twitter:creator" content="@MozDevNet">
+
+  <link rel="search" type="application/opensearchdescription+xml" href="https://developer.mozilla.org/en-US/search/xml" title="Mozilla Developer Network">
+
+  <!-- third-generation iPad with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://developer.cdn.mozilla.net/static/img/favicon144.a6e4162070f4.png">
+  <!-- iPhone with high-resolution Retina display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://developer.cdn.mozilla.net/static/img/favicon114.0e9fabd44f85.png">
+  <!-- first- and second-generation iPad: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://developer.cdn.mozilla.net/static/img/favicon72.8ff9d87c82a0.png">
+  <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="https://developer.cdn.mozilla.net/static/img/favicon57.a2490b9a2d76.png">
+  <!-- basic favicon -->
+  
+    
+  
+  <link rel="shortcut icon" href="https://developer.cdn.mozilla.net/static/img/favicon32.e02854fdcf73.png">
+  <!--[if IE]>
+  <meta http-equiv="imagetoolbar" content="no">
+  <script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/html5shiv.3948ccddab6f.js" charset="utf-8"></script>
+  <![endif]-->
+
+  
+  <link rel="alternate" type="application/json" href="/en-US/docs/Learn/Getting_started_with_the_web$json">
+  <link rel="canonical" href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web" >
+
+  
+    
+      <link rel="alternate" hreflang="cs" href="/cs/docs/Learn/Getting_started_with_the_web" title="Getting started with the Web">
+    
+      <link rel="alternate" hreflang="de" href="/de/docs/Learn/Getting_started_with_the_web" title="Das Web für Einsteiger">
+    
+      <link rel="alternate" hreflang="es" href="/es/docs/Learn/Getting_started_with_the_web" title="Primeros pasos en la Web">
+    
+      <link rel="alternate" hreflang="fa" href="/fa/docs/Learn/Getting_started_with_the_web" title="Getting started with the Web">
+    
+      <link rel="alternate" hreflang="fr" href="/fr/docs/Apprendre/Commencer_avec_le_web" title="Commencer avec le Web">
+    
+      <link rel="alternate" hreflang="id" href="/id/docs/Learn/Getting_started_with_the_web" title="Mengenal apa itu Web">
+    
+      <link rel="alternate" hreflang="it" href="/it/docs/Learn/Getting_started_with_the_web" title="Primi Passi con il Web">
+    
+      <link rel="alternate" hreflang="ja" href="/ja/docs/Learn/Getting_started_with_the_web" title="Web入門">
+    
+      <link rel="alternate" hreflang="ko" href="/ko/docs/Learn/Getting_started_with_the_web" title="Web과 함께 시작하기">
+    
+      <link rel="alternate" hreflang="nl" href="/nl/docs/Learn/Getting_started_with_the_web" title="Van start met het Web">
+    
+      <link rel="alternate" hreflang="pl" href="/pl/docs/Learn/Getting_started_with_the_web" title="Getting started with the Web">
+    
+      <link rel="alternate" hreflang="pt-BR" href="/pt-BR/docs/Aprender/Getting_started_with_the_web" title="Começando na Web">
+    
+      <link rel="alternate" hreflang="ru" href="/ru/docs/Learn/Getting_started_with_the_web" title="Начало работы с Веб">
+    
+      <link rel="alternate" hreflang="tr" href="/tr/docs/%C3%96%C4%9Fren/Getting_started_with_the_web" title="Web ile başlarken">
+    
+      <link rel="alternate" hreflang="vi" href="/vi/docs/Learn/Getting_started_with_the_web" title="Getting started with the Web">
+    
+      <link rel="alternate" hreflang="zh-CN" href="/zh-CN/docs/Learn/Getting_started_with_the_web" title="Web开发入门">
+    
+      <link rel="alternate" hreflang="zh-TW" href="/zh-TW/docs/Learn/Getting_started_with_the_web" title="Web 入門">
+    
+  
+
+  <!-- document-specific social tags -->
+  <meta property="og:title" content="Getting started with the Web">
+  <meta property="og:url" content="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web">
+  <meta name="twitter:url" content="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web">
+  <meta name="twitter:title" content="Getting started with the Web">
+  
+  <meta property="og:description" content="It&#39;s a lot of work to create a professional website, so if you&#39;re new to web development we encourage you to start small. You won&#39;t build another Facebook right away, but it&#39;s not hard to get your own simple website online, so we&#39;ll start there.">
+  <meta name="description" content="It&#39;s a lot of work to create a professional website, so if you&#39;re new to web development we encourage you to start small. You won&#39;t build another Facebook right away, but it&#39;s not hard to get your own simple website online, so we&#39;ll start there.">
+  <meta name="twitter:description" content="It&#39;s a lot of work to create a professional website, so if you&#39;re new to web development we encourage you to start small. You won&#39;t build another Facebook right away, but it&#39;s not hard to get your own simple website online, so we&#39;ll start there.">
+  
+
+
+  
+    
+
+<script type="text/javascript">
+
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-36116321-5', 'mozilla.org');
+    ga('set', 'anonymizeIp', true);
+
+    
+
+    // dimension9 == "Section editing"
+    
+        // dimension12 == 'Page Revision"
+        ga('set', 'dimension12', 1075398);
+
+    (function() {
+        // http://cfsimplicity.com/61/removing-analytics-clutter-from-campaign-urls
+        var win = window;
+        var removeUtms = function(){
+            var location = win.location;
+            if (location.href.indexOf('utm') != -1 && win.history.replaceState) {
+                win.history.replaceState({}, '', location.pathname);
+            }
+        };
+
+        ga('send', 'pageview', {'hitCallback': removeUtms});
+    })();
+</script>
+
+  
+</head>
+<body data-slug="Learn/Getting_started_with_the_web" contextmenu="edit-history-menu" data-search-url="" class="document zone ">
+
+  <script type="text/javascript">
+    (function(win) {
+        'use strict';
+
+        
+            (function(){
+  var FLAGS = {
+    'compat_api': false,'kumaediting': false,'page_move': false,'registration_disabled': false,'search_suggestions': false,'section_edit': false,'spam_admin_override': false,'spam_checks_enabled': true,'spam_spammer_override': false,'spam_submissions_enabled': false,'spam_testing_mode': false,'wiki_samples': true,'wiki_spam_exempted': false,'wiki_spam_training': false
+    },
+    SWITCHES = {
+    'wiki_error_on_delete': false,'wiki_force_immediate_rendering': false,'enable_optimizely': false,'welcome_email': true,'application_ACAO': true,'store_revision_ips': true,'dumb_doc_urls': true
+    },
+    SAMPLES = {
+    
+    };
+  window.waffle = {
+    "flag_is_active": function waffle_flag(flag_name) {
+      
+      return !!FLAGS[flag_name];
+    },
+    "switch_is_active": function waffle_switch(switch_name) {
+      
+      return !!SWITCHES[switch_name];
+    },
+    "sample_is_active": function waffle_sample(sample_name) {
+      
+      return !!SAMPLES[sample_name];
+    },
+    "FLAGS": FLAGS,
+    "SWITCHES": SWITCHES,
+    "SAMPLES": SAMPLES
+  };
+})();
+
+        
+
+        // This needs to be set before ckeditor.js loads
+        window.CKEDITOR_BASEPATH = '/static/js/libs/ckeditor/build/ckeditor/';
+
+        // This represents the site configuration
+        win.mdn = {
+            // Properties and settings for CKEditor will go here
+            ckeditor: {},
+            // Feature test results and methods will be placed here
+            features: {},
+            // The path to static assets (images, CSS, JS) in MDN
+            staticPath: 'https://developer.cdn.mozilla.net/static/',
+            // Optimizely API
+            optimizely: win['optimizely'] || [],
+            // Site notifications
+            
+            notifications: [],
+            
+            // Wiki-specific settings will be placed here
+            wiki: {
+                autosuggestTitleUrl: '/en-US/docs/get-documents'
+            },
+            // Assets that need to be dynamically injected
+            assets: {
+                css: {
+                    'editor-content': ['https://developer.cdn.mozilla.net/static/build/styles/editor-content.eee9629c7f8a.css',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/styles/wiki-compat-tables.f3a3bfce97a1.css',]
+                },
+                js: {
+                    'syntax-prism': ['https://developer.cdn.mozilla.net/static/build/js/syntax-prism.7a66ddfa68bf.js',],
+                    'wiki-compat-tables': ['https://developer.cdn.mozilla.net/static/build/js/wiki-compat-tables.14ce5dcb2c3d.js',]
+                }
+            }
+        };
+    })(this);
+</script>
+
+  
+
+  
+
+  <ul id="nav-access">
+    <li><a href="#document-main" id="skip-main">Skip to main content</a></li>
+    <li><a id="skip-language" href="#language">Select language</a></li>
+    
+      <li><a href="#q" id="skip-search">Skip to search</a></li>
+    
+  </ul>
+
+  <!-- Header -->
+  <header id="main-header"><div class="center">
+
+    <div id="tabzilla">
+        <a href="//www.mozilla.org/" class="no-track">mozilla</a>
+    </div>
+
+    <div class="clear header-clear"></div>
+
+
+    <a href="/en-US/" class="logo">Mozilla Developer Network</a>
+
+
+    <div id="nav-sec">
+        
+                  <ul>
+                  <li>
+
+    
+
+    <form>
+      <div class="oauth-login-container">
+          <div class="oauth-login-options" tabIndex="0">
+              <span class="oauth-login-options-text">
+                Sign in
+              </span>
+              <span class="oauth-icon oauth-github" data-service="GitHub" data-href="/users/github/login/?next=%2Fen-US%2FLearn%2FGetting_started_with_the_web" title="GitHub"><i class="icon-github" aria-hidden="true"></i></span>
+          </div>
+          <div class="oauth-login-picker" aria-hidden="true">
+              <ul>
+                  <li>
+                    Sign in or create an account:<br>
+                    <a href="/users/github/login/?next=%2Fen-US%2FLearn%2FGetting_started_with_the_web" class="login-link" data-service="GitHub"><i class="icon-github" aria-hidden="true"></i>GitHub</a>
+                  </li>
+                  <li class="wait-for-persona disabled">
+                      Sign in: <a href="/docs/MDN/Contribute/Persona_Sign_In_on_MDN"><i aria-hidden="true" title="Why is Persona sign in only?" class="icon-question-sign"></i></a><br>
+                      <a href="/en-US/users/signin" class="login-link launch-persona-login" data-next="/en-US/Learn/Getting_started_with_the_web" data-service="Persona"><i class="icon-user" aria-hidden="true"></i>Persona</a>
+                  </li>
+              </ul>
+              
+          </div>
+      </div>
+    </form>
+</li>
+                </ul>
+        
+    </div>
+
+    <nav id="main-nav" role="navigation"><ul><li><a href="/en-US/docs/Web">Web Platform<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu submenu-cols-2 js-submenu" id="nav-platform-submenu">
+          <div class="submenu-column">
+            <div class="title">Technologies</div>
+            <ul>
+              <li><a href="/en-US/docs/Web/HTML">HTML</a></li>
+              <li><a href="/en-US/docs/Web/CSS">CSS</a></li>
+              <li><a href="/en-US/docs/Web/JavaScript">JavaScript</a></li>
+              <li><a href="/en-US/docs/Web/Guide/Graphics">Graphics</a></li>
+              <li><a href="/en-US/docs/Web/API">APIs / DOM</a></li>
+              <li><a href="/en-US/docs/Web/Apps">Apps</a></li>
+              <li><a href="/en-US/docs/Web/MathML">MathML</a></li>
+            </ul>
+          </div><div class="submenu-column last">
+            <div class="title">References & Guides</div>
+            <ul>
+              <li><a href="/en-US/docs/Learn">Learn the Web</a></li>
+              <li><a href="/en-US/docs/Web/Tutorials">Tutorials</a></li>
+              <li><a href="/en-US/docs/Web/Reference">References</a></li>
+              <li><a href="/en-US/docs/Web/Guide">Developer Guides</a></li>
+              <li><a href="/en-US/docs/Web/Accessibility">Accessibility</a></li>
+              <li><a href="/en-US/docs/Web">...more docs</a></li>
+            </ul>
+          </div>
+        </div>
+      </li><li><a href="/en-US/docs/Zones">Mozilla Docs<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu js-submenu" id="nav-zones-submenu">
+          <div class="submenu-column">
+            <ul>
+              <li><a href="/en-US/docs/Mozilla/Add-ons">Add-ons</a></li>
+              <li><a href="/en-US/docs/Mozilla/Firefox">Firefox</a></li>
+              <li><a href="/en-US/docs/Mozilla/Marketplace">Firefox Marketplace</a></li>
+              <li><a href="/en-US/docs/Mozilla/B2G_OS">B2G OS</a></li>
+              <li><a href="/en-US/docs/Persona">Persona</a></li>
+            </ul>
+          </div>
+        </div>
+      </li><li><a href="/en-US/docs/Tools">Developer Tools</a></li><li><a href="/en-US/docs/MDN/Feedback">Feedback<i aria-hidden="true" class="icon-caret-down"></i></a>
+
+        <div class="submenu js-submenu" id="nav-contact-submenu">
+          <div class="submenu-column">
+            <ul>
+                <li><a href="https://support.mozilla.org/">Get Firefox help<i aria-hidden="true" class="icon-external-link"></i></a></li>
+                <li><a href="http://stackoverflow.com/">Get web development help<i aria-hidden="true" class="icon-external-link"></i></a></li>
+            </ul>
+            <ul>
+              <li><a href="/en-US/docs/MDN/Community">Join the MDN community</a></li>
+              <li><a href="https://bugzilla.mozilla.org/form.doc">Report a content problem<i aria-hidden="true" class="icon-external-link"></i></a></li>
+              <li><a href="https://bugzilla.mozilla.org/form.mdn">Report a bug<i aria-hidden="true" class="icon-external-link"></i></a></li>
+            </ul>
+          </div>
+        </div>
+
+      </li><li class="nav-search-link"><a href="/en-US/search" title="Search"><i aria-hidden="true" class="icon-search"></i></a></li><li class="main-nav-search"><form action="/en-US/search" method="get" role="search">
+        <div class="search-wrap">
+          <label for="main-q" class="offscreen">Search</label>
+          <input type="search" id="main-q" name="q" placeholder="Search" data-value="" value="" />
+          <span class="search-trigger"><i aria-hidden="true" class="icon-search"></i></span>&nbsp;
+          <button type="submit" class="offscreen">Search</button>
+        </div>
+      </form></li></ul></nav>
+  </div></header>
+
+  <!-- Content will go here -->
+  <main id="content"><div class="center clear">
+  
+
+  
+      
+        <div class="zone-article-header" id="document-main"><div class="center">
+          <!-- zone title -->
+          <div class="zone-title"><a href="/en-US/docs/Learn">Learning web development</a></div>
+          <!-- zone image -->
+          <div class="zone-image"></div>
+        </div></div>
+      
+
+     <!-- end is_zone -->
+
+
+    <div class="wiki-main-content" ><div class="center">
+      
+      <div class="article-meta">
+        <!-- action buttons -->
+        
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  <ul class="page-buttons" data-sticky="false">
+      
+      <li><button id="languages-menu" class="transparent" aria-haspopup="true" aria-owns="languages-menu-submenu" aria-expanded="false"><span>Languages</span><i aria-hidden="true" class="icon-language"></i></button>
+
+        <div class="submenu js-submenu" id="languages-menu-submenu">
+          <div class="submenu-column">
+            <ul id="translations">
+              
+                
+                  <li><bdi><a rel="internal" href="/cs/docs/Learn/Getting_started_with_the_web" title="Getting started with the Web">Čeština</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="/de/docs/Learn/Getting_started_with_the_web" title="Das Web für Einsteiger">Deutsch</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="/es/docs/Learn/Getting_started_with_the_web" title="Primeros pasos en la Web">Español</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="/fa/docs/Learn/Getting_started_with_the_web" title="Getting started with the Web">فارسی</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="/fr/docs/Apprendre/Commencer_avec_le_web" title="Commencer avec le Web">Français</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="/id/docs/Learn/Getting_started_with_the_web" title="Mengenal apa itu Web">Bahasa Indonesia</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="/it/docs/Learn/Getting_started_with_the_web" title="Primi Passi con il Web">Italiano</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="/ja/docs/Learn/Getting_started_with_the_web" title="Web入門">日本語</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="/ko/docs/Learn/Getting_started_with_the_web" title="Web과 함께 시작하기">한국어</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="/nl/docs/Learn/Getting_started_with_the_web" title="Van start met het Web">Nederlands</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="/pl/docs/Learn/Getting_started_with_the_web" title="Getting started with the Web">Polski</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="/pt-BR/docs/Aprender/Getting_started_with_the_web" title="Começando na Web">Português (do Brasil)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="/ru/docs/Learn/Getting_started_with_the_web" title="Начало работы с Веб">Русский</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="/tr/docs/%C3%96%C4%9Fren/Getting_started_with_the_web" title="Web ile başlarken">Türkçe</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="/vi/docs/Learn/Getting_started_with_the_web" title="Getting started with the Web">Tiếng Việt</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="/zh-CN/docs/Learn/Getting_started_with_the_web" title="Web开发入门">中文 (简体)</a></bdi></li>
+                
+                  <li><bdi><a rel="internal" href="/zh-TW/docs/Learn/Getting_started_with_the_web" title="Web 入門">正體中文 (繁體)</a></bdi></li>
+                
+              
+
+              
+                <li><a href="/en-US/docs/Learn/Getting_started_with_the_web$locales" rel="nofollow, noindex" id="translations-add">Add a translation</a></li>
+              
+            </ul>
+          </div>
+        </div>
+      </li>
+
+      <li class="page-buttons-edit"><a href="/en-US/docs/Learn/Getting_started_with_the_web$edit" class="button" data-optimizely-hook="button-edit-doc" id="edit-button">Edit<i aria-hidden="true" class="icon-pencil"></i></a></li>
+
+        
+
+        <li><button id="advanced-menu" class="only-icon" aria-haspopup="true" aria-owns="advanced-menu-submenu" aria-expanded="false"><span>Advanced</span><i aria-hidden="true" class="icon-cog"></i></button>
+        <div class="submenu js-submenu" id="advanced-menu-submenu">
+          <!-- this page -->
+          <div class="submenu-column">
+            <div class="title">Advanced</div>
+            <ul>
+                <li><a href="/en-US/docs/Learn/Getting_started_with_the_web$history" rel="nofollow, noindex">History</a></li>
+                
+                
+                
+                
+
+
+                
+
+                
+                
+                
+                <li class="page-print"><a href="#" onclick="return window.print();">Print this article</a></li>
+            </ul>
+          </div>
+        </div>
+  </li></ul>
+
+        <!-- crumbs -->
+        
+  <nav class="crumbs" role="navigation"><ol xmlns:v="http://rdf.data-vocabulary.org/#" aria-label="breadcrumbs">
+    <li typeof="v:Breadcrumb"><a href="/en-US" rel="v:url" property="v:title">MDN</a></li>
+    
+      <li class="crumb" typeof="v:Breadcrumb"><a href="/en-US/docs/Learn" rel="v:url" property="v:title">Learning web development</a></li>
+    
+    <li class="crumb" typeof="v:Breadcrumb" property="v:title">Getting started with the Web</li>
+  </ol></nav>
+      </div>
+
+      <!-- heading -->
+      <div id="wiki-document-head" class="document-head">
+          <span class="from-search-previous-box">
+            <a class="button from-search-previous only-icon disabled" title="Previous Search Result" data-empty-title="No Previous Search Result"><i aria-hidden="true" class="icon-chevron-left"></i></a>
+          </span>
+          <span class="from-search-navigate-wrap">
+            <a href="#" class="from-search-navigate"><span class="from-search-navigate-up"><i aria-hidden="true" class="icon-double-angle-up"></i></span><span class="from-search-navigate-down"><i aria-hidden="true" class="icon-double-angle-down"></i></span></a>
+          </span>
+          <div class="from-search-toc submenu">
+            <span class="title">Your Search Results</span>
+            <ol></ol>
+          </div>
+          <span class="from-search-next-box">
+            <a class="button from-search-next only-icon disabled" title="Next Search Result" data-empty-title="No Previous Search Result"><i aria-hidden="true" class="icon-chevron-right"></i></a>
+          </span>
+
+        
+        <div class="contributor-avatars" data-all-text="see all contributors" data-alternate-message="hide contributors" data-has-hidden="1">
+            <ul>
+            
+                <li class="shown">
+                <a href="/en-US/profiles/SphinxKnight" title="View profile: SphinxKnight">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="SphinxKnight" data-src="https://secure.gravatar.com/avatar/8fb358ea9b7af22f5021a29e122ea069?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">SphinxKnight</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="/en-US/profiles/EnriquePabloBarreraVega" title="View profile: EnriquePabloBarreraVega">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="EnriquePabloBarreraVega" data-src="https://secure.gravatar.com/avatar/13e0f2856dfe6e9f6715d5e00d8404ba?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">EnriquePabloBarreraVega</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="/en-US/profiles/bychek.ru" title="View profile: bychek.ru">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="bychek.ru" data-src="https://secure.gravatar.com/avatar/bf305e50606dd2a25a8ab673e317fc26?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">bychek.ru</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="/en-US/profiles/rpettit686" title="View profile: rpettit686">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="rpettit686" data-src="https://secure.gravatar.com/avatar/14f0a50dd98bdc080abaf2d99f95fffb?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">rpettit686</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="/en-US/profiles/jsx" title="View profile: jsx">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="jsx" data-src="https://secure.gravatar.com/avatar/8cc61d4e2dc63e75976a334348d473bc?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">jsx</noscript></a>
+                </li>
+            
+                <li class="shown">
+                <a href="/en-US/profiles/chrisdavidmills" title="View profile: chrisdavidmills">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="chrisdavidmills" data-src="https://secure.gravatar.com/avatar/deeea0ba82390bd5acc539703c4b0cfb?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">chrisdavidmills</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="/en-US/profiles/LeBasti" title="View profile: LeBasti">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="LeBasti" data-src="https://secure.gravatar.com/avatar/2e24a5a02c6110208fcfcbfbd4efe0c9?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">LeBasti</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="/en-US/profiles/arbatskiy" title="View profile: arbatskiy">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="arbatskiy" data-src="https://secure.gravatar.com/avatar/80057bf43074bbf6372b8d7aaba49bd3?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">arbatskiy</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="/en-US/profiles/pravinbudharap" title="View profile: pravinbudharap">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="pravinbudharap" data-src="https://secure.gravatar.com/avatar/85fb4a0208a86199f8e5071509fcc3fa?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">pravinbudharap</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="/en-US/profiles/Jeremie" title="View profile: Jeremie">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Jeremie" data-src="https://secure.gravatar.com/avatar/ea74cf7f528273838138e9ae407cd8ef?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Jeremie</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="/en-US/profiles/Sheppy" title="View profile: Sheppy">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Sheppy" data-src="https://secure.gravatar.com/avatar/945076feb88f2d7003891ffbf06f32bf?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Sheppy</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="/en-US/profiles/Andrew_Pfeiffer" title="View profile: Andrew_Pfeiffer">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="Andrew_Pfeiffer" data-src="https://secure.gravatar.com/avatar/5eb09ead2ae59781536803335ec21764?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">Andrew_Pfeiffer</noscript></a>
+                </li>
+            
+                <li class="hidden">
+                <a href="/en-US/profiles/klez" title="View profile: klez">
+                <noscript data-width="34" data-height="34" data-class="avatar" data-alt="klez" data-src="https://secure.gravatar.com/avatar/8f12f2e8aea4579fb6cb12c6a197a797?s=34&amp;r=pg&amp;d=https%3A%2F%2Fdeveloper.cdn.mozilla.net%2Fmedia%2Fimg%2Favatar.png">klez</noscript></a>
+                </li>
+            
+            </ul>
+        </div>
+        
+
+        <h1>Getting started with the Web</h1>
+
+      </div>
+      
+
+      <!-- start the main content container -->
+        <div id="wiki-column-container" class="wiki-right-present wiki-left-present">
+
+          <!-- content row with three strips -->
+          <div class="column-container column-container-reverse">
+
+            
+              <!-- TOC, approvals, etc -->
+              <div class="column-strip wiki-column" id="wiki-right">
+              
+              <!-- table of contents -->
+              <div id="toc" class="toc toggleable">
+                <a href="#toc" class="title toggler" data-open-icon="icon-plus" data-closed-icon="icon-minus">In This Article<i></i></a>
+                <ol class="toggle-container">
+                  <li><a href="#The_story_of_your_first_website" rel="internal">The story of your first website</a><ol><li><a href="#Installing_basic_software" rel="internal">Installing basic software</a><li><a href="#What_will_your_website_look_like" rel="internal">What will your website look like?</a><li><a href="#Dealing_with_files" rel="internal">Dealing with files</a><li><a href="#HTML_basics" rel="internal">HTML basics</a><li><a href="#CSS_basics" rel="internal">CSS basics</a><li><a href="#JavaScript_basics" rel="internal">JavaScript basics</a><li><a href="#Publishing_your_website" rel="internal">Publishing your website</a><li><a href="#How_the_web_works" rel="internal">How the web works</a></ol></li>
+                </ol>
+              </div>
+              
+              </div>
+            
+
+            
+            
+              
+            
+
+            <!-- center: main article content -->
+            <div id="wiki-content" class="column-half wiki-column text-content">
+
+              
+
+              
+
+              
+                
+                
+                
+              
+              
+
+              <!-- just the article content -->
+              <article id="wikiArticle">
+                
+                  
+                    <div><!-- --></div>
+
+<div><div class="prevnext" style="text-align: right;"> 
+    <p><a href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software">Next  »</a></p> 
+</div></div>
+
+<div class="summary">
+<p><em>Getting started with the Web</em> is a concise series introducing you to the practicalities of web development. You'll set up the tools you need to construct a simple webpage and publish your own simple code.</p>
+</div>
+
+<h2 id="The_story_of_your_first_website">The story of your first website</h2>
+
+<p>It's a lot of work to create a professional website, so if you're new to web development we encourage you to start small. You won't build another Facebook right away, but it's not hard to get your own simple website online, so we'll start there.</p>
+
+<p>By working through the articles listed below, you will go from nothing to getting your first webpage online. Let's go!</p>
+
+<h3 id="Installing_basic_software"><a href="/en-US/Learn/Getting_started_with_the_web/Installing_basic_software">Installing basic software</a></h3>
+
+<p>When it comes to tools for building a website, there's a lot to pick from. If you're just starting out, you might be confused by the array of code editors, frameworks, and testing tools out there. In <a href="/en-US/Learn/Getting_started_with_the_web/Installing_basic_software">Installing basic software</a> we show you step-by-step how to install just the software you need to begin some basic web development.</p>
+
+<h3 id="What_will_your_website_look_like"><a href="/en-US/Learn/Getting_started_with_the_web/What_will_your_website_look_like">What will your website look like?</a></h3>
+
+<p>Before you start writing the code for your website, you should plan it first. What information are you showcasing? What fonts and colors are you using? <a href="/en-US/Learn/Getting_started_with_the_web/What_should_your_web_site_be_like">What will your website look like?</a> We outline a simple method you can follow to plan out your site's content and design.</p>
+
+<h3 id="Dealing_with_files"><a href="/en-US/Learn/Getting_started_with_the_web/Dealing_with_files">Dealing with files</a></h3>
+
+<p>A website consists of many files: text content, code, stylesheets, media content, and so on. When you're building a website, you need to assemble these files into a sensible structure and make sure they can talk to one another. <a href="/en-US/Learn/Getting_started_with_the_web/Dealing_with_files">Dealing with files</a> explains how to set up a sensible file structure for your website and what issues you should be aware of.</p>
+
+<h3 id="HTML_basics"><a href="/en-US/Learn/Getting_started_with_the_web/HTML_basics">HTML basics</a></h3>
+
+<p>Hypertext Markup Language (HTML) is the code that you use to structure your web content, and give it meaning and purpose. For example, is my content a set of paragraphs, or a list of bullet points? Do I have images inserted in my page? Do I have a data table? Without overwhelming you, <a href="/en-US/Learn/Getting_started_with_the_web/HTML_basics">HTML basics</a> provides enough information to make you familiar with HTML.</p>
+
+<h3 id="CSS_basics"><a href="/en-US/Learn/Getting_started_with_the_web/CSS_basics">CSS basics</a></h3>
+
+<p>Cascading Stylesheets (CSS) is the code that you use to style your website. For example, do you want text to be black or red? Where should content be drawn on the screen? What background images and colors should be used to decorate your website? <a href="/en-US/Learn/Getting_started_with_the_web/CSS_basics">CSS basics</a> takes you through what you need to get started.</p>
+
+<h3 id="JavaScript_basics"><a href="/en-US/Learn/Getting_started_with_the_web/JavaScript_basics">JavaScript basics</a></h3>
+
+<p>JavaScript is the programming language that you use to add interactive features to your website, for example games, things that happen when buttons are pressed or data is entered in forms, dynamic styling effects, animation, and much more. <a href="/en-US/Learn/Getting_started_with_the_web/JavaScript_basics">JavaScript basics</a> gives you an idea of what is possible with this exciting language, and how to get started.</p>
+
+<h3 id="Publishing_your_website"><a href="/en-US/Learn/Getting_started_with_the_web/Publishing_your_website">Publishing your website</a></h3>
+
+<p>Once you have finished writing the code and organizing the files that make up your website, you need to put it all online so people can find it. <a href="/en-US/Learn/Getting_started_with_the_web/Publishing_your_website">Publishing your sample code</a> describes how to get your simple sample code online with minimum effort.</p>
+
+<h3 id="How_the_web_works"><a href="/en-US/Learn/Getting_started_with_the_web/How_the_Web_works">How the web works</a></h3>
+
+<p>When you access your favorite website, a lot of complicated things happen in the background that you may not know about. <a href="/en-US/Learn/Getting_started_with_the_web/How_the_Web_works">How the web works</a> outlines what happens when you view a webpage on your computer.</p>
+
+<p></p><div class="prevnext" style="text-align: right;"> 
+    <p><a href="/en-US/docs/Learn/Getting_started_with_the_web/Installing_basic_software">Next  »</a></p> 
+</div><p></p>
+                  
+                
+              </article>
+
+              
+
+                <!-- contributors -->
+                <div class="wiki-block contributors">
+                  <h2 class="offscreen">Document Tags and Contributors</h2>
+                  
+                  
+  <div class="tag-attach-list contributors-sub">
+    <i aria-hidden="true" class="icon-tags icon-fw"></i>
+    <strong>Tags:</strong>&nbsp;
+    <ul class="tags tags-small">
+      
+        <li><a href="/en-US/docs/tag/Beginner">Beginner</a></li>
+      
+        <li><a href="/en-US/docs/tag/beginner">beginner</a></li>
+      
+        <li><a href="/en-US/docs/tag/CSS">CSS</a></li>
+      
+        <li><a href="/en-US/docs/tag/Design">Design</a></li>
+      
+        <li><a href="/en-US/docs/tag/Guide">Guide</a></li>
+      
+        <li><a href="/en-US/docs/tag/HTML">HTML</a></li>
+      
+        <li><a href="/en-US/docs/tag/Index">Index</a></li>
+      
+        <li><a href="/en-US/docs/tag/index">index</a></li>
+      
+        <li><a href="/en-US/docs/tag/publishing">publishing</a></li>
+      
+        <li><a href="/en-US/docs/tag/theory">theory</a></li>
+      
+    </ul>
+  </div>
+
+
+                  
+                    <div class="contributors-sub">
+                      <i aria-hidden="true" class="icon-group icon-fw"></i>&nbsp;<strong>Contributors to this page:</strong> 
+        <a href="/en-US/profiles/SphinxKnight">SphinxKnight</a>, 
+    
+        <a href="/en-US/profiles/EnriquePabloBarreraVega">EnriquePabloBarreraVega</a>, 
+    
+        <a href="/en-US/profiles/bychek.ru">bychek.ru</a>, 
+    
+        <a href="/en-US/profiles/rpettit686">rpettit686</a>, 
+    
+        <a href="/en-US/profiles/jsx">jsx</a>, 
+    
+        <a href="/en-US/profiles/chrisdavidmills">chrisdavidmills</a>, 
+    
+        <a href="/en-US/profiles/LeBasti">LeBasti</a>, 
+    
+        <a href="/en-US/profiles/arbatskiy">arbatskiy</a>, 
+    
+        <a href="/en-US/profiles/pravinbudharap">pravinbudharap</a>, 
+    
+        <a href="/en-US/profiles/Jeremie">Jeremie</a>, 
+    
+        <a href="/en-US/profiles/Sheppy">Sheppy</a>, 
+    
+        <a href="/en-US/profiles/Andrew_Pfeiffer">Andrew_Pfeiffer</a>, 
+    
+        <a href="/en-US/profiles/klez">klez</a>
+    
+                    </div>
+                  
+
+                  
+                    <div class="contributors-sub">
+                      <i aria-hidden="true" class="icon-clock-o icon-fw"></i>&nbsp;<strong>Last updated by:</strong>
+                      <a href="/en-US/profiles/SphinxKnight">SphinxKnight</a>,
+                      <time datetime="2016-06-26T11:23:44-07:00">Jun 26, 2016, 11:23:44 AM</time>
+                    </div>
+                  
+                </div>
+              
+            </div>
+
+            
+              <!-- quick links and zone subnav strip -->
+              <div id="wiki-left" class="column-strip wiki-column">
+
+              
+
+                
+                  <!-- zone subnav -->
+                  
+  <nav class="zone-subnav-container" role="navigation">
+    <div class="subnav" id="Subnav">
+      
+
+<ol><li><a href="/en-US/Learn/Getting_started_with_the_web">Getting started with the web</a></li>
+ <li><a href="/en-US/Learn/HTML">HTML — structuring the Web</a>
+  <ol><li><strong><a href="https://developer.mozilla.org/en-US/Learn/HTML">HTML overview</a></strong></li>
+   <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>
+    <ol><li><strong><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML overview</a></strong></li>
+     <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started">Getting started with HTML</a></li>
+     <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML">What’s in the head? Metadata in HTML</a></li>
+     <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals">HTML text fundamentals</a></li>
+     <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks">Creating hyperlinks</a></li>
+     <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting">Advanced text formatting</a></li>
+     <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure">Document and website structure</a></li>
+     <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML">Debugging HTML</a></li>
+     <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter">Assessment: Marking up a letter</a></li>
+     <li><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content">Assessment: Structuring a page of content</a></li>
+    </ol></li>
+   <li><a href="/en-US/Learn/HTML/Multimedia_and_embedding">Multimedia and embedding</a>
+    <ol><li><strong><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding">Multimedia and embedding overview</a></strong></li>
+     <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">Images in HTML</a></li>
+     <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content">Video and audio content</a></li>
+     <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies">From object to iframe — other embedding technologies</a></li>
+     <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web">Adding vector graphics to the Web</a></li>
+     <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">Responsive images</a></li>
+     <li><a href="/en-US/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page">Assessment: Mozilla splash page</a></li>
+    </ol></li>
+  </ol></li>
+ <li><a href="/en-US/Learn/CSS">CSS — styling the Web</a>
+  <ol><li><strong><a href="/en-US/Learn/CSS">CSS overview</a></strong></li>
+   <li><a href="/en-US/docs/Learn/CSS/Introduction_to_CSS">Introduction to CSS</a>
+    <ol><li><strong><a href="/en-US/docs/Learn/CSS/Introduction_to_CSS">Introduction to CSS overview</a></strong></li>
+     <li><a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works">How CSS works</a></li>
+     <li><a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Syntax">CSS syntax</a></li>
+     <li><a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Selectors">Selectors</a></li>
+     <li><a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units">CSS values and units</a></li>
+     <li><a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance">Cascade and inheritance</a></li>
+     <li><a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model">The box model</a></li>
+     <li><a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS">Debugging CSS</a></li>
+     <li><a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Fundamental_CSS_comprehension">Assessment: Fundamental CSS comprehension</a></li>
+    </ol></li>
+   <li><a href="/en-US/docs/Learn/CSS/Styling_text">Styling text</a>
+    <ol><li><strong><a href="/en-US/docs/Learn/CSS/Styling_text">Styling text overview </a></strong></li>
+     <li><a href="/en-US/docs/Learn/CSS/Styling_text/Fundamentals">Fundamental text and font styling</a></li>
+     <li><a href="/en-US/docs/Learn/CSS/Styling_text/Styling_lists">Styling lists</a></li>
+     <li><a href="/en-US/docs/Learn/CSS/Styling_text/Styling_links">Styling links</a></li>
+     <li><a href="/en-US/docs/Learn/CSS/Styling_text/Web_fonts">Web fonts</a></li>
+     <li><a href="/en-US/docs/Learn/CSS/Styling_text/Typesetting_a_homepage">Assessment: Typesetting a community school homepage</a></li>
+    </ol></li>
+   <li><a href="/en-US/docs/Learn/CSS/Styling_boxes">Styling boxes</a>
+    <ol><li><strong><a href="/en-US/docs/Learn/CSS/Styling_boxes">Styling boxes overview</a></strong></li>
+     <li><a href="/en-US/docs/Learn/CSS/Styling_boxes/Box_model_recap">Box model recap</a></li>
+     <li><a href="/en-US/docs/Learn/CSS/Styling_boxes/Backgrounds">Backgrounds</a></li>
+     <li><a href="/en-US/docs/Learn/CSS/Styling_boxes/Borders">Borders</a></li>
+     <li><a href="/en-US/docs/Learn/CSS/Styling_boxes/Styling_tables">Styling tables</a></li>
+     <li><a href="/en-US/docs/Learn/CSS/Styling_boxes/Advanced_box_effects">Advanced box effects</a></li>
+     <li><a href="/en-US/Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper">Assessment: Creating fancy letterheader paper</a></li>
+     <li><a href="/en-US/docs/Learn/CSS/Styling_boxes/A_cool_looking_box">Assessment: A cool looking box</a></li>
+    </ol></li>
+   <li><a href="/en-US/docs/Learn/CSS/CSS_layout">CSS layout</a>
+    <ol><li><strong><a href="/en-US/docs/Learn/CSS/CSS_layout">CSS layout overview</a></strong></li>
+     <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Floats">Floats</a></li>
+     <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Positioning">Positioning</a></li>
+     <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Practical_positioning_examples">Practical positioning examples</a></li>
+     <li><a href="/en-US/docs/Learn/CSS/CSS_layout/Flexbox">Flexbox</a></li>
+    </ol></li>
+  </ol></li>
+ <li><a href="/en-US/Learn/Other_learning_material">Advanced learning material</a>
+  <ol><li><a href="/en-US/Learn/JavaScript">JavaScript — dynamic scripting</a></li>
+   <li><a href="/en-US/docs/Learn/WebGL">WebGL — graphics processing</a></li>
+  </ol></li>
+ <li><a href="/en-US/docs/Learn/Common_questions">Common questions</a>
+  <ol><li><a href="/en-US/docs/Learn/HTML/Howto">HTML questions</a></li>
+   <li><a href="/en-US/docs/Learn/CSS/Howto">CSS questions</a></li>
+   <li><a href="/en-US/Learn/Common_questions#How_the_Web_works">How the Web works</a></li>
+   <li><a href="/en-US/Learn/Common_questions#Tools_and_setup">Tools and setup</a></li>
+   <li><a href="https://developer.mozilla.org/en-US/Learn/Common_questions#Design_and_accessibility">Design and accessibility</a></li>
+  </ol></li>
+ <li><a href="/en-US/Learn/How_to_contribute">How to contribute</a></li>
+</ol>
+    </div>
+  </nav>&nbsp;
+                
+
+                
+
+                <!-- approvals -->
+                
+
+              
+
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </div> <!-- ends "main-content" -->
+
+  <menu type="context" id="edit-history-menu">
+    <menuitem data-action="/en-US/docs/Learn/Getting_started_with_the_web$edit" label="Edit page"></menuitem>
+    <menuitem data-action="/en-US/docs/Learn/Getting_started_with_the_web$history" label="View page history"></menuitem>
+  </menu>
+
+  </div></main>
+
+  <!-- Footer -->
+  <footer><div class="center">
+    <div class="column-container">
+      <div class="column-main">
+        
+        <div class="contentinfo">
+          <p>&copy; 2005-2016 Mozilla Developer Network and individual contributors.</p> <p>Content is available under <a href="/en-US/docs/MDN/About#Copyrights_and_licenses">these licenses</a>.</p>
+          <ul>
+            <li><a href="/docs/MDN/About">About MDN</a></li>
+            <li><a href="//www.mozilla.org/about/legal/terms/mozilla">Terms</a></li>
+            <li><a href="//www.mozilla.org/privacy/websites/">Privacy</a></li>
+            <li><a href="//www.mozilla.org/privacy/websites/#cookies">Cookies</a></li>
+            <li><a href="//github.com/mozilla/kuma">Contribute to the code</a></li>
+          </ul>
+        </p>
+        
+        </div>
+      </div>
+      <div class="column-strip">
+        
+          
+  
+    <form class="languages go" method="get" action="/en-US/docs/Web">
+      <label for="language">Other languages:</label>
+      <select id="language" class="wiki-l10n" name="next" dir="ltr">
+        <option value="/en-US/docs/Learn/Getting_started_with_the_web" selected>
+          English (US)
+        </option>
+        
+          <option value="/cs/docs/Learn/Getting_started_with_the_web">
+            Čeština
+          </option>
+          <option value="/de/docs/Learn/Getting_started_with_the_web">
+            Deutsch
+          </option>
+          <option value="/es/docs/Learn/Getting_started_with_the_web">
+            Español
+          </option>
+          <option value="/fa/docs/Learn/Getting_started_with_the_web">
+            فارسی
+          </option>
+          <option value="/fr/docs/Apprendre/Commencer_avec_le_web">
+            Français
+          </option>
+          <option value="/id/docs/Learn/Getting_started_with_the_web">
+            Bahasa Indonesia
+          </option>
+          <option value="/it/docs/Learn/Getting_started_with_the_web">
+            Italiano
+          </option>
+          <option value="/ja/docs/Learn/Getting_started_with_the_web">
+            日本語
+          </option>
+          <option value="/ko/docs/Learn/Getting_started_with_the_web">
+            한국어
+          </option>
+          <option value="/nl/docs/Learn/Getting_started_with_the_web">
+            Nederlands
+          </option>
+          <option value="/pl/docs/Learn/Getting_started_with_the_web">
+            Polski
+          </option>
+          <option value="/pt-BR/docs/Aprender/Getting_started_with_the_web">
+            Português (do Brasil)
+          </option>
+          <option value="/ru/docs/Learn/Getting_started_with_the_web">
+            Русский
+          </option>
+          <option value="/tr/docs/%C3%96%C4%9Fren/Getting_started_with_the_web">
+            Türkçe
+          </option>
+          <option value="/vi/docs/Learn/Getting_started_with_the_web">
+            Tiếng Việt
+          </option>
+          <option value="/zh-CN/docs/Learn/Getting_started_with_the_web">
+            中文 (简体)
+          </option>
+          <option value="/zh-TW/docs/Learn/Getting_started_with_the_web">
+            正體中文 (繁體)
+          </option>
+      </select>
+      <noscript><button type="submit">Go</button></noscript>
+    </form>
+  
+
+        
+      </div>
+    </div>
+  </div></footer>
+
+  <!-- site js -->
+  
+    
+    <!--[if lte IE 8]><script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/selectivizr.091e18cf669b.js" charset="utf-8"></script><![endif]-->
+
+    <form id="_persona_login" method="post" action="/users/persona/signin" data-csrf-token-url="/users/persona/csrf" data-request='{"siteName": "Mozilla Developer Network", "siteLogo": "/static/img/opengraph-logo.png"}' data-persona-script="https://login.persona.org/include.js">
+  <input type="hidden" name="csrfmiddlewaretoken" value="" id="_persona_csrf_token" />
+  <input type="hidden" name="next" value="" id="_persona_next_url"/>
+  <input type="hidden" name="process" value="" id="_persona_process"/>
+  <input type="hidden" name="assertion" id="_persona_assertion"/>
+</form>
+
+
+    <script type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/main.a7b27a25fb9c.js" charset="utf-8"></script>
+
+      <script>
+        if(window.mdn && mdn.analytics) mdn.analytics.trackOutboundLinks();
+      </script>
+
+    
+    <script type="text/javascript" src="https://developer.cdn.mozilla.net/static/jsi18n/en-us/javascript.b28203373cc1.js"></script>
+  
+    <script async type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/wiki.28ae780f6173.js" charset="utf-8"></script>
+
+
+  
+
+  <script async type="text/javascript" src="https://developer.cdn.mozilla.net/static/build/js/helpfulness.320352cf4b63.js" charset="utf-8"></script>
+
+  
+
+
+</body>
 </html>
